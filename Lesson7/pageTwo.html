@@ -1,0 +1,54 @@
+
+<!--jQuery Mobile 定位头部栏和尾部栏-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+<div data-role="page" id="pageone">
+
+    <!--头部和尾部可以通过三种方式进行定位：-->
+    <!--Inline - 默认。头部栏和尾部栏与页面内容内联。-->
+    <!--Fixed - 头部栏和尾部栏固定在页面的顶部和底部。-->
+    <!--Fullscreen - 与 Fixed 定位模式基本相同，头部栏和尾部栏固定在页面的顶部和底部。-->
+    <!--但是当他工具栏滚动出屏幕之外时，不会自动重新显示，除非点击屏幕，这对于图片或视频类有提升代入感的应用是非常有用的。-->
+    <!--注意这种模式下工具栏会遮住页面内容，所以最好用在比较特殊的场合下。-->
+    <!--使用 data-position 属性来定位头部栏和尾部栏：-->
+
+    <!--要启用全屏定位，请使用 data-position="fixed"，并添加 data-fullscreen 属性到元素：-->
+    <!--提示：全屏定位适用于照片、图像和视频。-->
+    <!--提示：固定定位和全屏定位中，通过点击屏幕将隐藏和显示头部栏和尾部栏。-->
+    <div data-role="header"  data-position="fixed">
+
+        <h1>欢迎访问我的主页</h1>
+        <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-left">搜索</a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>我是段落</p>
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left ui-btn-icon-notext">在Facebook上关注我</a>
+            <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left ui-btn-icon-notext">在Twitter上关注我</a>
+            <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-left ui-btn-icon-notext">在Instagram上关注我</a>
+        </div>
+    </div>
+
+
+    <!--在工具栏上只显示图标-->
+    <!--在工具栏上只显示图标可以使用 ui-btn-icon-notext 类。-->
+
+
+</div>
+
+</body>
+</html>

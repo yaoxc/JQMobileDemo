@@ -1,0 +1,61 @@
+
+
+<!--jquery mobile 过渡-->
+<!--jQuery Mobile 包含 CSS3 效果让您选择页面打开的方式-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!--jQuery Mobile 提供了各种页面切换到下一个页面的效果。-->
+<!--<a href="#anylink" data-transition="slide">切换到第二个页面</a>-->
+<!--过渡 	        描述 -->
+<!--fade 	    默认。淡入到下一页-->
+<!--flip 	    从后向前翻转到下一页 	-->
+<!--flow 	    抛出当前页，进入下一页 	-->
+<!--pop 	    像弹出窗口那样转到下一页。-->
+<!--slide 	    从右向左滑动到下一页-->
+<!--slidefade 	从右向左滑动并淡入到下一页-->
+<!--slideup 	从下到上滑动到下一页-->
+<!--slidedown 	从上到下滑动到下一页-->
+<!--turn 	    转向下一页-->
+<!--none 	    无过渡效果。-->
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>欢迎! 点击以下链接跳转到第二个页面。 </p>
+        <a href="#pagetwo" data-transition="flip">跳转到第二个页面</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+<div data-role="page" id="pagetwo">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>这是第二个页面。点击以下链接跳转到第一个页面。</p>
+        <a href="#pageone" data-transition="flip">跳转到第一个页面</a>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+</body>
+</html>

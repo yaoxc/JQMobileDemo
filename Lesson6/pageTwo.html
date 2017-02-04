@@ -1,0 +1,74 @@
+
+<!--jQuery Mobile 弹窗过渡-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+        <!--默认情况下，弹窗是没有过渡效果的。如果你需要你可以通过 data-transition="value" 属性来添加过渡效果-->
+        <a href="#myPopup0" data-rel="popup" data-transition="fade" class="ui-btn ui-btn-inline ui-corner-all">显示弹窗</a>
+        <div data-role="popup" id="myPopup0" class="ui-content">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">关闭</a>
+            <p>我在右上角有个关闭按钮</p>
+            <p><b>提示:</b> 你也可以通过点击弹窗外的区域来关闭弹窗。</p>
+        </div>
+
+        <!--弹窗方向小边框-->
+        <!--如果需要添加弹窗方向小边框，可以使用 data-arrow 属性，并指定值 "l" (左边), "t" (顶部), "r" (右边) or "b" (底部):-->
+        <a href="#myPopup" data-rel="popup" class="ui-btn">打开弹窗</a>
+        <div data-role="popup" id="myPopup" class="ui-content" data-arrow="l">
+            <p>左边框的方向。</p>
+        </div>
+
+        <!--弹窗对话框-->
+        <!--你可以将弹窗制作为一个标准的对话框 (头部, 内容和底部标记):-->
+        <!--实例-->
+        <a href="#myPopupDialog" data-rel="popup" class="ui-btn">打开对话框弹窗</a>
+        <div data-role="popup" id="myPopupDialog" style="width: 200px">
+            <div data-role="header"><h1>头部文本..</h1></div>
+            <div data-role="main" class="ui-content"><p>一些文本..</p><a href="#">一些链接..</a></div>
+            <div data-role="footer"><h1>底部文本..</h1></div>
+        </div>
+
+        <!--图片弹窗-->
+        <!--你可以在弹窗中显示图片:-->
+        <!--实例-->
+        <a href="#myPopupImg" data-rel="popup" data-position-to="window">
+            <img src="./40E1DA434BD9D2AAAE58B5E997F807D0.jpg" alt="Runoob" style="width:80px;">
+        </a>
+
+        <div data-role="popup" id="myPopupImg" data-overlay-theme="b">
+            <img src="./40E1DA434BD9D2AAAE58B5E997F807D0.jpg" style="width:800px;height:400px;" alt="Runoob">
+        </div>
+
+        <!--弹窗背景覆盖-->
+        <!--你可以使用 data-overlay-theme 属性在弹窗后添加背景颜色。-->
+        <!--默认情况下覆盖的背景色的透明的。使用 data-overlay-theme="a" 添加浅色背景，使用 data-overlay-theme="b" 添加深色的覆盖背景：-->
+        <!--实例-->
+        <a href="#myPopupOver" data-rel="popup">Show Popup</a>
+
+        <div data-role="popup" id="myPopupOver" data-overlay-theme="b">
+            <p>在我身后有个深色背景。</p>
+        </div>
+
+        <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+</body>
+</html>

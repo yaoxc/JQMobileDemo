@@ -1,0 +1,48 @@
+
+<!--自定义过滤-->
+
+<!--一般的插入到各个列表项的文本就是作为过滤的文本使用(如 A 对应 "Adele" 或 "B" 对应 "Billy")。 -->
+<!--但是，如果你想指定自定义的过滤的文本，你需要在子元素中使用 data-filtertext 属性:-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="main" class="ui-content">
+        <h2>我的通讯录</h2>
+        <p>以下实例中，我们在 "Adele" 中使用了 data-filtertext="fav" 。这意味着你要找到 "Adele" 需要使用以下关键字：f, a, v 或 fav。</p>
+        <form class="ui-filterable">
+            <input id="myFilter" data-type="search" placeholder="自定义过滤..">
+        </form>
+        <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+
+            <!--Note :如果你在元素中使用了 data-filtertext 属性，元素的源文本内容在过滤时将被忽略，-->
+            <!--这时你如果还要查找列表项"Adele"，需要使用的关键字为：f, a, v 或 fav。-->
+            <li data-filtertext="NULL"><a href="#">Adele</a></li>
+            <li><a href="#">Agnes</a></li>
+            <li><a href="#">Albert</a></li>
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Cameron</a></li>
+            <li><a href="#">Chloe</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Diana</a></li>
+            <li><a href="#">Frank</a></li>
+            <li><a href="#">Gabriel</a></li>
+            <li><a href="#">Glen</a></li>
+            <li><a href="#">Ralph</a></li>
+            <li><a href="#">Valarie</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

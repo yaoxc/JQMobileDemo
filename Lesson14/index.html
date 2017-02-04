@@ -1,0 +1,53 @@
+<!--jQuery Mobile 过滤-->
+<!--可过滤元素-->
+
+<!--所有的元素如果有一个或更多的子元素均可过滤。-->
+
+<!--如何创建搜索字段:-->
+
+<!--1.你想过滤的元素必须使用 data-filter="true" 属性。-->
+<!--2.创建 <input> 元素并指定 id，元素上加上 data-type="search" 属性。-->
+<!--3.这样就能创建基本的搜索字段。将 <input> 元素放置于一个表单中，-->
+<!--4.表单 <form> 元素使用 "ui-filterable" 类 - 该类会调整搜索字段与过滤元素的外边距。-->
+<!--5.接着为过滤的元素添加 data-input 属性。该值需要是 <input> 元素的 id。-->
+<!--提示: 可以在搜索字段中使用 placeholder 属性来设置提示信息：-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="main" class="ui-content">
+        <h2>我的通讯录</h2>
+        <form class="ui-filterable">
+            <input id="myFilter" data-type="search" placeholder="根据名称搜索..">
+        </form>
+        <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+            <li><a href="#" >Adele</a></li>
+            <li><a href="#">Agnes</a></li>
+            <li><a href="#">Albert</a></li>
+            <li><a href="#">Billy</a></li>
+            <li><a href="#">Bob</a></li>
+            <li><a href="#">Calvin</a></li>
+            <li><a href="#">Cameron</a></li>
+            <li><a href="#">Chloe</a></li>
+            <li><a href="#">Christina</a></li>
+            <li><a href="#">Diana</a></li>
+            <li><a href="#">Gabriel</a></li>
+            <li><a href="#">Glen</a></li>
+            <li><a href="#">Ralph</a></li>
+            <li><a href="#">Valarie</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+

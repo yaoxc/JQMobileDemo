@@ -1,0 +1,85 @@
+
+<!--jQuery Mobile 弹窗-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>欢迎来到我的主页</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+        <!--创建一个弹窗，需要使用 <a> 和 <div> 元素。-->
+        <!--在 <a> 元素上添加 data-rel="popup" 属性， -->
+        <!--<div> 元素添加 data-role="popup" 属性。-->
+        <!--接着我们为 <div> 指定 id， 然后设置 <a> 的 href 值为 <div> 指定的 id。-->
+        <!--<div> 中的内容为弹窗显示的内容。-->
+
+        <!--注意: <div> 弹窗与点击的 <a> 链接必须在同一个页面上。-->
+
+        <a href="#myPopup0" data-rel="popup" data-position-to="window" class="ui-btn ui-btn-inline ui-corner-all">显示弹窗</a>
+
+        <!--如果你需要为弹窗添加内边距与外边距可以在 <div> 中添加 "ui-content" 类:-->
+        <div data-role="popup" id="myPopup" class="ui-content">
+            <p>这是一个简单的弹窗</p>
+        </div>
+
+        <!--关闭弹窗-->
+        <!--默认情况下，点击弹窗之外的区域或按下 "Esc" 键即可关闭弹窗。-->
+        <!--如果你不想点击弹窗之外的区域关闭弹窗可以在添加上添加 data-dismissible="false" 属性（不推荐）。-->
+        <!--你也可以在弹窗上添加关闭按钮，按钮上使用 data-rel="back" 属性，并通过样式来控制按钮的位置。-->
+        <div data-role="popup" id="myPopup0" data-dismissible="false" class="ui-content">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">关闭</a>
+            <p>我在右上角有个关闭按钮</p>
+            <p><b>提示:</b> 你也可以通过点击弹窗外的区域来关闭弹窗。</p>
+        </div>
+
+        <!--定位弹窗-->
+        <!--默认情况下，弹窗会直接显示在点击元素的上方，如果需要控制弹窗的位置，可以在用于打开弹窗的点击链接上使用 data-position-to 属性。-->
+
+        <!--控制弹窗位置的三种方式：-->
+        <!--属性值 	                    描述-->
+        <!--data-position-to="window" 	弹窗在窗口居中显示-->
+        <!--data-position-to="#myId" 	弹窗显示在知道的 #id 元素上-->
+        <!--data-position-to="origin" 	默认。弹窗显示在点击的元素上。-->
+        <br>
+        <a href="#myPopup1" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="window">弹窗窗口显示</a>
+        <a href="#myPopup2" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="#demo">弹窗显示在 id="demo" 元素上</a>
+        <a href="#myPopup3" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all" data-position-to="origin">默认显示</a>
+
+        <div data-role="popup" id="myPopup1" class="ui-content">
+            <p>我显示在窗口的中间部分。</p>
+        </div>
+        <div data-role="popup" id="myPopup2" class="ui-content">
+            <p>我显示在 id="demo" 的元素上。</p>
+        </div>
+        <div data-role="popup" id="myPopup3" class="ui-content">
+            <p>我显示在点击的按钮上。</p>
+        </div>
+
+        <div>
+        <p>这是一个段落。</p>
+        <p>这是另外一个段落。</p>
+        <p>这还是一个段落。</p>
+        <p>这是一个段落。这个段落包含了子元素：这是一个插入在段落中 id="demo" 的 <span id="demo" style="color:red;">span</span> 元素 。</p>
+        </div>
+
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+</body>
+</html>
